@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <!-- ══ Favicon & SEO ══ -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+  <meta name="theme-color" content="#05080D">
+  <meta name="msapplication-TileColor" content="#05080D">
+  <meta property="og:title" content="Dousa Travel - Voyage Sur-Mesure">
+  <meta property="og:description" content="Plus de 100 pays explorés. Votre prochain voyage, conçu à la perfection.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dousa.travel">
+  <meta property="og:image" content="/favicon-512.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Dousa Travel - Voyage Sur-Mesure">
+  <meta name="twitter:description" content="Plus de 100 pays explorés. Votre prochain voyage, conçu à la perfection.">
+  <meta name="twitter:image" content="/favicon-512.png">
+<script>
+// Suppress dev-only warnings in production
+(function(){
+  var _w = console.warn.bind(console);
+  console.warn = function(){
+    var msg = arguments[0] || '';
+    if(typeof msg === 'string' && (msg.includes('cdn.tailwindcss') || msg.includes('tailwind'))) return;
+    _w.apply(console, arguments);
+  };
+})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="DOUSA TRAVEL — Consulting voyage premium. Plus de 100 pays explorés au service de votre prochain voyage.">
+<title>Dousa Travel - Voyage Sur-Mesure</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // ── EMAILJS INIT — remplace par tes clés ──
+  (function(){
+    emailjs.init({ publicKey: "Qyfjf-dosU2Q1D2MJ" }); // ← remplace ici
+  })();
+</script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        gold: '#C9A042',
+        'gold-l': '#DDB85A',
+        'bg-base': '#05080D',
+        'bg-2': '#090D17',
+        'bg-3': '#0C1120',
+        'txt': '#EDE8DF',
+        'txt2': 'rgba(237,232,223,0.58)',
+        muted: '#586070',
+      },
+      fontFamily: {
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['Raleway', 'system-ui', 'sans-serif'],
+      },
+      letterSpacing: {
+        'ultra': '0.28em',
+        'wide2': '0.2em',
+        'wide3': '0.16em',
+      },
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Raleway:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── GLOBAL ── */
+:root{--gold:#C9A042;--gold-l:#DDB85A;--gold-dim:rgba(201,160,66,.12);--gold-g:rgba(201,160,66,.22);--bg:#05080D;--bg2:#090D17;--bg3:#0C1120;--br:rgba(201,160,66,.16);--br2:rgba(237,232,223,.07)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:hidden;max-width:100%}
+body{background:var(--bg);color:#EDE8DF;font-family:'Raleway',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold-dim);color:var(--gold-l)}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.07}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(201,160,66,.2)}50%{box-shadow:0 0 20px 4px rgba(201,160,66,.08)}}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(26px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+.rev.on{opacity:1;transform:none}
+.d1{transition-delay:.11s}.d2{transition-delay:.22s}.d3{transition-delay:.33s}
+
+/* ── LABEL ── */
+.lbl{font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600;display:inline-block}
+
+/* ── GOLD RULE ── */
+.rule{display:flex;align-items:center;gap:12px;justify-content:center;margin-top:16px}
+.rule::before,.rule::after{content:"";flex:1;max-width:36px;height:1px;background:var(--br)}
+.rule span{width:3px;height:3px;border-radius:50%;background:var(--gold)}
+
+/* ── BUTTONS ── */
+.btn-g{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--bg);padding:14px 32px;font-family:'Raleway',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;border:none;border-radius:2px;cursor:pointer;transition:all .3s;position:relative;overflow:hidden;text-decoration:none}
+.btn-g::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);background-size:200%;opacity:0;transition:opacity .3s}
+.btn-g:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(201,160,66,.34)}
+.btn-g:hover::after{opacity:1;animation:shimmer .8s ease}
+.btn-o{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#EDE8DF;padding:13px 32px;font-family:'Raleway',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;border:1px solid rgba(237,232,223,.2);border-radius:2px;cursor:pointer;transition:all .3s;text-decoration:none}
+.btn-o:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.btn-full{width:100%;justify-content:center}
+
+/* ── HERO ── */
+.h-bg{position:absolute;inset:0;background-color:#0a1020;background-image:linear-gradient(180deg,rgba(5,8,13,.52) 0%,rgba(5,8,13,.25) 35%,rgba(5,8,13,.78) 78%,rgba(5,8,13,1) 100%),url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1800&q=80');background-size:cover;background-position:center center;background-repeat:no-repeat;background-attachment:scroll;-webkit-background-size:cover}
+.h-bg::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 55% 50% at 50% 45%,rgba(201,160,66,.05) 0%,transparent 70%)}
+.h-eye{display:inline-flex;align-items:center;gap:12px;margin-bottom:28px}
+.h-eye::before,.h-eye::after{content:"";display:block;width:28px;height:1px;background:var(--gold);opacity:.6}
+
+/* HERO ANIMATIONS */
+.hero-anim-1{opacity:0;animation:fadeIn 1s ease .3s forwards}
+.hero-anim-2{opacity:0;animation:fadeUp 1.1s cubic-bezier(.16,1,.3,1) .5s forwards}
+.hero-anim-3{opacity:0;animation:fadeUp 1.1s cubic-bezier(.16,1,.3,1) .65s forwards}
+.hero-anim-4{opacity:0;animation:fadeUp 1.1s cubic-bezier(.16,1,.3,1) .8s forwards}
+.hero-anim-5{opacity:0;animation:fadeUp 1.1s cubic-bezier(.16,1,.3,1) .95s forwards}
+.hero-anim-6{opacity:0;animation:fadeIn 1s ease 1.25s forwards}
+
+/* SCROLL INDICATOR */
+
+
+/* ── TICKER ── */
+.ticker-track{display:flex;width:max-content;animation:ticker 32s linear infinite}
+.ticker-track:hover{animation-play-state:paused}
+
+/* ── MAP IMAGE ── */
+.map-img-box{position:relative;border:1px solid var(--br);border-radius:2px;overflow:hidden;background:#000}
+.map-img-box::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);z-index:2}
+.map-img-box::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 80px rgba(5,8,13,.65);z-index:2;pointer-events:none}
+.map-img{width:100%;display:block;filter:contrast(1.06) brightness(.94)}
+
+/* MAP STATS */
+.ms-item{background:var(--bg2);padding:20px 24px;display:flex;align-items:center;gap:18px;transition:background .3s;position:relative;overflow:hidden}
+.ms-item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold)}
+.ms-item:hover{background:var(--bg3)}
+.ms-n{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold);font-weight:300;line-height:1;flex-shrink:0;min-width:76px}
+
+/* ── ABOUT ── */
+.aph-frame{border:1px solid var(--br);border-radius:2px;padding:12px;position:relative}
+.aph-frame::before{content:"";position:absolute;top:-1px;left:20px;right:20px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.aph-badge{position:absolute;bottom:-12px;right:-12px;background:var(--gold);color:var(--bg);padding:14px 18px;border-radius:2px;text-align:center;box-shadow:0 12px 32px rgba(201,160,66,.28)}
+
+/* ── SERVICES ── */
+.svc-grid{display:grid;gap:2px;background:var(--br);border:1px solid var(--br);border-radius:2px;overflow:hidden}
+.svc-card{background:var(--bg2);padding:40px 30px 36px;position:relative;overflow:hidden;transition:background .35s}
+.svc-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:transparent;transition:background .4s}
+.svc-card:hover{background:var(--bg3)}
+.svc-card:hover::before{background:rgba(201,160,66,.35)}
+.svc-card.feat{background:linear-gradient(158deg,#0F1D36 0%,#091523 100%)}
+.svc-card.feat::before{background:var(--gold)}
+.svc-num{font-family:'Cormorant Garamond',serif;font-size:3.2rem;color:rgba(201,160,66,.07);font-weight:300;line-height:1;margin-bottom:14px;display:block}
+.svc-for{font-size:.64rem;color:var(--muted);letter-spacing:.07em;margin-bottom:15px;padding-left:9px;border-left:2px solid var(--gold);font-style:italic;line-height:1.5}
+.svc-price{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold);font-weight:400;display:block;margin-bottom:22px;line-height:1}
+.sdiv{width:100%;height:1px;background:var(--br2);margin:18px 0}
+.stit{font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;display:block}
+.slist{list-style:none;margin-bottom:14px}
+.slist li{display:flex;align-items:flex-start;gap:8px;font-size:.75rem;color:rgba(237,232,223,.78);padding:5px 0;border-bottom:1px solid rgba(201,160,66,.05);line-height:1.45;font-weight:300}
+.slist li::before{content:"—";color:var(--gold);flex-shrink:0;font-size:.66rem;margin-top:1px}
+.slist.no li{color:var(--muted)}
+.slist.no li::before{content:"×";color:var(--muted)}
+.upsell{margin-top:18px;border:1px solid var(--br);border-radius:2px;padding:16px;background:rgba(201,160,66,.06);position:relative;overflow:hidden}
+.upsell::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.svc-btn{display:block;text-align:center;padding:13px 22px;margin-top:26px;border:1px solid var(--gold);color:var(--gold);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;border-radius:2px;transition:all .3s;text-decoration:none}
+.svc-btn:hover,.svc-card.feat .svc-btn{background:var(--gold);color:var(--bg);box-shadow:0 8px 26px rgba(201,160,66,.28)}
+.svc-card.feat .svc-btn:hover{background:var(--gold-l);border-color:var(--gold-l)}
+
+/* ── TESTIMONIALS ── */
+.testi{background:var(--bg2);border:1px solid rgba(237,232,223,.07);border-radius:2px;padding:32px 26px 28px;position:relative;transition:border-color .4s,transform .4s,box-shadow .4s;overflow:hidden}
+.testi::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,160,66,0),transparent);transition:background .4s}
+.testi:hover{border-color:rgba(201,160,66,.22);transform:translateY(-4px);box-shadow:0 20px 56px rgba(0,0,0,.35)}
+.testi:hover::before{background:linear-gradient(90deg,transparent,rgba(201,160,66,.35),transparent)}
+
+/* ── WHY ITEMS ── */
+.wi{background:var(--bg2);padding:22px 24px;display:flex;align-items:flex-start;gap:14px;transition:background .3s}
+.wi:hover{background:var(--bg3)}
+.wi-ic{width:36px;height:36px;border:1px solid var(--br);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.85rem;transition:border-color .3s,background .3s}
+.wi:hover .wi-ic{border-color:var(--gold);background:var(--gold-dim)}
+
+/* ── DESTINATIONS ── */
+.dest-scroll{display:flex;gap:14px;overflow-x:auto;padding-bottom:12px;padding-left:0;padding-right:0;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none}
+.dest-scroll::-webkit-scrollbar{display:none}
+.dest-card{flex-shrink:0;position:relative;border-radius:2px;overflow:hidden;scroll-snap-align:start;cursor:pointer}
+.dest-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease,filter .4s;filter:brightness(.78)}
+.dest-card:hover img{transform:scale(1.05);filter:brightness(.98)}
+.dest-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,8,13,.88) 0%,transparent 52%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px 16px}
+.dest-fade-l{position:absolute;left:0;top:0;bottom:0;width:60px;background:linear-gradient(90deg,var(--bg),transparent);pointer-events:none;z-index:2}
+.dest-fade-r{position:absolute;right:0;top:0;bottom:0;width:60px;background:linear-gradient(-90deg,var(--bg),transparent);pointer-events:none;z-index:2}
+
+/* DESKTOP DEST LARGER */
+@media(min-width:1024px){
+  .dest-card{height:420px}
+  .dest-card img{filter:brightness(.75)}
+  .dest-ov{padding:24px 20px}
+}
+
+/* ── PROCESS CIRCLE ── */
+.pst-c{width:76px;height:76px;border:1px solid var(--br);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--gold);background:var(--bg2);position:relative;z-index:1;transition:all .35s}
+.pst-c:hover{border-color:var(--gold);background:var(--gold-dim)}
+
+
+/* ── FLIP CARDS ── */
+.dest-flip{flex-shrink:0;scroll-snap-align:start;perspective:1000px;cursor:pointer;border-radius:2px}
+.dest-flip-inner{position:relative;width:100%;height:100%;transition:transform .65s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
+.dest-flip.flipped .dest-flip-inner{transform:rotateY(180deg)}
+.dest-front,.dest-back{position:absolute;inset:0;border-radius:2px;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.dest-back{transform:rotateY(180deg);background:linear-gradient(158deg,#0F1D36 0%,#091523 100%);border:1px solid rgba(201,160,66,.3);display:flex;flex-direction:column;justify-content:space-between;padding:28px 24px;overflow-y:auto}
+.dest-front img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.78);transition:filter .4s}
+.dest-flip:hover .dest-front img{filter:brightness(.95)}
+/* ── FORM ── */
+.fg{background:rgba(9,13,23,.8);backdrop-filter:blur(20px);border:1px solid var(--br);border-radius:4px;padding:40px 36px;position:relative;overflow:hidden}
+.fg::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.finp,.fsel,.ftxt{width:100%;background:rgba(237,232,223,.04);border:1px solid rgba(237,232,223,.07);border-radius:2px;padding:12px 14px;color:#EDE8DF;font-family:'Raleway',sans-serif;font-size:.82rem;font-weight:300;transition:border-color .3s,background .3s;outline:none;-webkit-appearance:none;appearance:none}
+.finp::placeholder,.ftxt::placeholder{color:#586070}
+.finp:focus,.fsel:focus,.ftxt:focus{border-color:rgba(201,160,66,.42);background:rgba(201,160,66,.04)}
+.fsel{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23C9A042' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.fsel option{background:#0C1120;color:#EDE8DF}
+.ftxt{resize:none;line-height:1.6}
+.fsub{width:100%;background:var(--gold);color:var(--bg);padding:15px;border:none;border-radius:2px;font-family:'Raleway',sans-serif;font-size:.69rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:all .3s}
+.fsub:hover{background:var(--gold-l);transform:translateY(-1px);box-shadow:0 12px 36px rgba(201,160,66,.3)}
+
+/* ── ABOUT PULL QUOTE ── */
+.pull{border-left:2px solid var(--gold);padding:16px 20px;background:rgba(201,160,66,.1);border-radius:0 2px 2px 0}
+
+/* ── MOBILE NAV MENU ── */
+#mobileMenu{display:none;position:fixed;inset:0;background:rgba(5,8,13,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:40px 32px}
+#mobileMenu.open{display:flex}
+.mob-link{background:none;border:none;cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:300;color:#EDE8DF;transition:color .25s;padding:4px 0;text-align:center;width:100%;max-width:280px}
+.mob-link:hover{color:var(--gold)}
+.mob-cta{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:var(--bg);padding:13px 36px;font-family:'Raleway',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;border-radius:2px;text-decoration:none;transition:all .3s;margin-top:8px;width:100%;max-width:280px}
+.mob-cta:hover{background:var(--gold-l)}
+#mobileMenu .close-btn{position:absolute;top:24px;right:24px;background:none;border:none;color:rgba(237,232,223,.6);font-size:1.3rem;cursor:pointer;padding:10px;line-height:1;transition:color .2s}
+#mobileMenu .close-btn:hover{color:var(--gold)}
+
+
+
+/* ANNOUNCE BAR LINK */
+.bar-link{color:var(--bg);text-decoration:underline;margin-left:6px;opacity:.8}
+.bar-link:hover{opacity:1}
+
+/* CRED BOX */
+.cred{border:1px solid var(--br);border-radius:2px;padding:13px 15px;background:rgba(201,160,66,.1);display:flex;align-items:flex-start;gap:10px;transition:border-color .3s}
+.cred:hover{border-color:rgba(201,160,66,.35)}
+
+/* MAP STAT GRID */
+.map-stat-grid{display:grid;gap:2px;background:var(--br);border:1px solid var(--br);border-radius:2px;overflow:hidden;margin-bottom:24px}
+
+/* FOOTER LINK HOVER */
+.fl-link{color:#586070;font-size:.75rem;font-weight:300;text-decoration:none;transition:color .25s;display:block;margin-bottom:8px}
+.fl-link:hover{color:#EDE8DF}
+
+/* Kazakhstan card — cadrage corrigé */
+.kaz-img {
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+@media (min-width: 1024px) {
+  .kaz-img {
+    object-position: center center !important;
+  }
+}
+@media (max-width: 1023px) {
+  .kaz-img {
+    object-position: center center !important;
+  }
+}
+</style>
+</head>
+<body class="bg-bg-base">
+
+<!-- NAV -->
+<nav id="nav" class="fixed left-0 right-0 z-40 flex items-center justify-between px-6 py-5 transition-all duration-300 lg:px-12" style="top:0px">
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="no-underline bg-transparent border-0 cursor-pointer p-0">
+    <span class="font-serif text-lg tracking-widest text-txt font-light">DOUSA <span class="text-gold">TRAVEL</span></span>
+  </button>
+  <!-- DESKTOP LINKS -->
+  <ul class="hidden lg:flex items-center gap-8 list-none">
+    <li><button onclick="goTo('about')" class="text-txt2 text-xs tracking-wide uppercase font-medium hover:text-gold transition-colors duration-200 bg-transparent border-0 cursor-pointer" style="letter-spacing:.16em;color:rgba(237,232,223,.6);font-family:inherit">Le Fondateur</button></li>
+    <li><button onclick="goTo('services')" class="text-txt2 text-xs tracking-wide uppercase font-medium hover:text-gold transition-colors duration-200 bg-transparent border-0 cursor-pointer" style="letter-spacing:.16em;color:rgba(237,232,223,.6);font-family:inherit">Nos services</button></li>
+    <li><button onclick="goTo('testimonials')" class="text-txt2 text-xs tracking-wide uppercase font-medium hover:text-gold transition-colors duration-200 bg-transparent border-0 cursor-pointer" style="letter-spacing:.16em;color:rgba(237,232,223,.6);font-family:inherit">Avis</button></li>
+    <li><a href="javascript:void(0)" onclick="goTo('contact');return false;" class="btn-g" style="padding:9px 20px;font-size:.64rem">Planifier mon voyage</a></li>
+  </ul>
+  <!-- MOBILE BURGER -->
+  <button id="burgerBtn" class="lg:hidden flex flex-col gap-1.5 cursor-pointer bg-transparent border-0 p-2" onclick="toggleMenu()" aria-label="Menu">
+    <span class="block w-6 h-px bg-txt transition-all duration-300"></span>
+    <span class="block w-6 h-px bg-txt transition-all duration-300"></span>
+    <span class="block w-6 h-px bg-txt transition-all duration-300"></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu">
+  <button class="close-btn" onclick="toggleMenu()" aria-label="Fermer">✕</button>
+  <button class="mob-link" onclick="goTo('about');toggleMenu()">Le Fondateur</button>
+  <button class="mob-link" onclick="goTo('services');toggleMenu()">Nos services</button>
+  <button class="mob-link" onclick="goTo('testimonials');toggleMenu()">Avis</button>
+  <a href="javascript:void(0)" onclick="goTo('contact');toggleMenu();return false;" class="mob-cta">Planifier mon voyage</a>
+</div>
+
+<!-- ─────────── HERO ─────────── -->
+<section id="hero" class="relative flex flex-col items-center justify-center" style="overflow:hidden;position:relative" style="min-height:100svh">
+  <div class="h-bg"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center px-6 w-full max-w-4xl flex flex-col items-center pt-32 pb-10 lg:pt-10 lg:pb-36">
+    <h1 class="hero-anim-2 font-serif font-light leading-tight mb-2 text-txt"
+        style="font-size:clamp(2rem,4.8vw,4.6rem);">
+      Plus de 100 pays<br><span class="text-gold italic">explorés.</span>
+    </h1>
+    <p class="hero-anim-3 font-serif font-light italic mb-7 lg:mb-8"
+       style="font-size:clamp(1.3rem,3vw,2.8rem);color:rgba(237,232,223,.72)">
+      Votre prochain voyage,<br class="lg:hidden"> conçu à la perfection.
+    </p>
+    <p class="hero-anim-4 text-txt2 font-light leading-relaxed mb-9 max-w-sm lg:max-w-md mx-auto"
+       style="font-size:clamp(.82rem,1.5vw,.9rem)">
+      Une expertise terrain rare, traduite en un voyage pensé uniquement pour vous.
+    </p>
+    <!-- BUTTONS -->
+    <div class="hero-anim-5 flex flex-col gap-3 w-full max-w-xs mx-auto lg:flex-row lg:max-w-none lg:w-auto lg:gap-3 lg:justify-center">
+      <button onclick="goTo('contact')" class="btn-g btn-full lg:w-auto">Planifier mon voyage</button>
+      <button class="btn-o btn-full lg:w-auto" onclick="goTo('services')">Découvrir nos services</button>
+    </div>
+  </div>
+
+  <!-- STATS — below buttons on mobile, absolute bottom on desktop -->
+  <div class="hero-anim-6 relative lg:absolute lg:bottom-12 z-10 w-full flex justify-center gap-8 flex-wrap px-6 pt-10 pb-6 lg:pt-0 lg:pb-0 lg:gap-14"
+       style="gap:clamp(24px,5vw,56px)">
+    <div class="text-center">
+      <span class="font-serif text-gold font-light block leading-none mb-1.5" style="font-size:clamp(1.8rem,4vw,2.2rem)">+100</span>
+      <span class="text-muted font-semibold" style="font-size:.55rem;letter-spacing:.2em;text-transform:uppercase">Pays explorés</span>
+    </div>
+    <div class="text-center">
+      <span class="font-serif text-gold font-light block leading-none mb-1.5" style="font-size:clamp(1.8rem,4vw,2.2rem)">+50%</span>
+      <span class="text-muted font-semibold" style="font-size:.55rem;letter-spacing:.2em;text-transform:uppercase">Du monde découvert</span>
+    </div>
+    <div class="text-center">
+      <span class="font-serif text-gold font-light block leading-none mb-1.5" style="font-size:clamp(1.8rem,4vw,2.2rem)">100%</span>
+      <span class="text-muted font-semibold" style="font-size:.55rem;letter-spacing:.2em;text-transform:uppercase">Sur mesure</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── TICKER ─────────── -->
+<div class="border-t border-b py-4" style="overflow:hidden" style="background:var(--bg2);border-color:var(--br)">
+  <div class="ticker-track">
+    <div style="display:flex">
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Plus de 100 Pays Explorés</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Consulting Voyage Premium</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Itinéraires Ultra-Optimisés</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Expérience Terrain Réelle</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Spots Exclusifs</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Zéro Voyage Générique</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Plus de 50% du Monde Découvert</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Une Approche Sur Mesure</span>
+    </div>
+    <div style="display:flex" aria-hidden="true">
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Plus de 100 Pays Explorés</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Consulting Voyage Premium</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Itinéraires Ultra-Optimisés</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Expérience Terrain Réelle</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Spots Exclusifs</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Zéro Voyage Générique</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Plus de 50% du Monde Découvert</span>
+      <span class="inline-flex items-center gap-4 px-5 whitespace-nowrap text-txt2 font-medium" style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase"><span style="width:3px;height:3px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0"></span>Une Approche Sur Mesure</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────── MAP SECTION ─────────── -->
+<section id="mapzone" class="py-20 lg:py-28 border-t border-b relative" style="overflow:hidden" style="background:var(--bg2);border-color:var(--br)">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-64 pointer-events-none" style="background:radial-gradient(ellipse,rgba(201,160,66,.06) 0%,transparent 65%)"></div>
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <!-- MOBILE: stacked | DESKTOP: side-by-side -->
+    <div class="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+
+      <!-- MAP IMAGE -->
+      <div class="rev order-1 lg:order-1">
+              <!-- D3 INTERACTIVE MAP -->
+      <div class="rev" style="position:relative">
+        <div id="worldmap-container" style="
+          border:1px solid rgba(201,160,66,.18);
+          border-radius:2px;
+          background:#05080D;
+          overflow:hidden;
+          position:relative;
+        ">
+          <!-- Gold top accent -->
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#C9A042,transparent);z-index:2"></div>
+          <!-- Map rendered here -->
+          <div id="worldmap" style="width:100%;line-height:0"></div>
+          <!-- Tooltip -->
+          <div id="map-tooltip" style="
+            display:none;position:absolute;
+            background:rgba(9,13,23,.95);
+            border:1px solid rgba(201,160,66,.35);
+            color:#EDE8DF;font-family:'Raleway',sans-serif;
+            font-size:.68rem;font-weight:500;letter-spacing:.06em;
+            padding:7px 14px;border-radius:2px;
+            pointer-events:none;z-index:10;
+            white-space:nowrap;
+          "></div>
+          <!-- Bottom gradient fade -->
+          <div style="position:absolute;bottom:0;left:0;right:0;height:40px;background:linear-gradient(to top,#05080D,transparent);pointer-events:none;z-index:2"></div>
+        </div>
+      </div>
+      </div>
+
+      <!-- MAP TEXT + STATS -->
+      <div class="rev d2 order-2 lg:order-2">
+        <span class="lbl">L'autorité terrain</span>
+        <h2 class="font-serif font-light mt-3 mb-3" style="font-size:clamp(1.8rem,2.8vw,2.6rem)">
+          Le monde comme<br><em class="text-gold">terrain d'expertise.</em>
+        </h2>
+        <p class="text-txt2 font-light leading-relaxed mb-8 text-sm">
+          Une expertise construite pays après pays. Pas dans un bureau.
+        </p>
+
+        <!-- STATS GRID -->
+        <div class="map-stat-grid">
+          <div class="ms-item">
+            <span class="ms-n">111</span>
+            <div>
+              <strong class="block text-xs font-semibold tracking-wide mb-0.5">Pays explorés</strong>
+              <span class="text-muted font-light" style="font-size:.68rem">Sur 197 pays officiels dans le monde</span>
+            </div>
+          </div>
+          <div class="ms-item">
+            <span class="ms-n">+50%</span>
+            <div>
+              <strong class="block text-xs font-semibold tracking-wide mb-0.5">Du monde découvert</strong>
+              <span class="text-muted font-light" style="font-size:.68rem">Plus de la moitié de la planète parcourue en personne</span>
+            </div>
+          </div>
+          <div class="ms-item">
+            <span class="ms-n">197</span>
+            <div>
+              <strong class="block text-xs font-semibold tracking-wide mb-0.5">Pays analysés</strong>
+              <span class="text-muted font-light" style="font-size:.68rem">Chaque destination étudiée et maîtrisée</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUOTE -->
+        <div class="pull">
+          <p class="font-serif italic leading-relaxed text-txt" style="font-size:1.05rem">
+            « Chaque conseil repose sur une expérience vécue, pas sur une brochure. »
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── ABOUT ─────────── -->
+<section id="about" class="py-20 lg:py-28" style="background:var(--bg)">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="flex flex-col gap-12 lg:grid lg:grid-cols-2 lg:gap-20 lg:items-center">
+
+      <!-- PHOTO -->
+      <div class="rev order-1 max-w-xs mx-auto w-full lg:max-w-none">
+        <div class="aph-frame relative">
+          <img class="w-full block rounded-sm" style="aspect-ratio:4/5;object-fit:cover;object-position:right center;"
+               src="assets/images/founder.jpg"
+               alt="DOUSAÏ — Fondateur DOUSA TRAVEL" loading="lazy">
+          <div class="aph-badge">
+            <strong class="block font-serif font-normal leading-none" style="font-size:1.9rem">+100</strong>
+            <small class="font-bold" style="font-size:.5rem;letter-spacing:.16em;text-transform:uppercase">pays visités</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEXT -->
+      <div class="rev d2 order-2">
+        <span class="lbl">Le fondateur</span>
+        <h2 class="font-serif font-light mt-3 mb-8" style="font-size:clamp(1.9rem,3vw,2.8rem)">
+          L'expérience<br><em class="text-gold">change tout.</em>
+        </h2>
+
+        <!-- STATEMENT LINES -->
+        <div class="mb-8" style="border-left:2px solid rgba(201,160,66,.3);padding-left:20px">
+          <p style="font-size:clamp(.95rem,1.6vw,1.05rem);color:rgba(237,232,223,.9);font-weight:300;line-height:1.5;margin-bottom:6px">
+            Plus de 100 pays explorés.
+          </p>
+          <p style="font-size:clamp(.95rem,1.6vw,1.05rem);color:rgba(237,232,223,.65);font-weight:300;line-height:1.5;margin-bottom:6px">
+            Pas depuis un bus touristique.
+          </p>
+          <p style="font-size:clamp(.95rem,1.6vw,1.05rem);color:rgba(237,232,223,.65);font-weight:300;line-height:1.5">
+            Sur le terrain. Au contact du réel.
+          </p>
+        </div>
+
+        <!-- MAIN TEXT -->
+        <p class="font-light leading-relaxed mb-8" style="font-size:clamp(.85rem,1.4vw,.95rem);color:rgba(237,232,223,.62);line-height:1.95">
+          Du Japon aux steppes du Kazakhstan, des temples de Birmanie aux hauteurs de la Bolivie, des rues de Lagos aux paysages irréels d'Islande — chaque frontière franchie m'a appris une chose : <span style="color:rgba(237,232,223,.88);font-weight:400">les meilleurs voyages ne s'achètent pas dans un catalogue.</span>
+        </p>
+
+        <p class="font-light mb-8" style="font-size:clamp(.85rem,1.4vw,.95rem);color:rgba(237,232,223,.62);line-height:1.7">
+          Aujourd'hui, cette expérience est au service de votre prochain départ.
+        </p>
+
+        <!-- PULL QUOTE -->
+        <div class="pull">
+          <p class="font-serif italic text-txt" style="font-size:clamp(1rem,1.6vw,1.15rem);line-height:1.55">
+            « Après plus de 100 pays, on ne planifie plus un voyage — on le sculpte. »
+          </p>
+        </div>
+        <!-- CREDS GRID -->
+        <div class="grid grid-cols-2 gap-2.5" style="margin-top:8px">
+          <div class="cred"><span style="font-size:.9rem;flex-shrink:0">🌍</span><div><strong class="block text-xs font-semibold tracking-wide mb-0.5">+100 pays explorés</strong><span class="text-muted font-light" style="font-size:.67rem">En personne, sur le terrain</span></div></div>
+          <div class="cred"><span style="font-size:.9rem;flex-shrink:0">✦</span><div><strong class="block text-xs font-semibold tracking-wide mb-0.5">Zéro voyage générique</strong><span class="text-muted font-light" style="font-size:.67rem">Chaque projet est unique</span></div></div>
+          <div class="cred"><span style="font-size:.9rem;flex-shrink:0">⚡</span><div><strong class="block text-xs font-semibold tracking-wide mb-0.5">Optimisation totale</strong><span class="text-muted font-light" style="font-size:.67rem">Temps, budget, expérience</span></div></div>
+          <div class="cred"><span style="font-size:.9rem;flex-shrink:0">🎯</span><div><strong class="block text-xs font-semibold tracking-wide mb-0.5">Spots exclusifs</strong><span class="text-muted font-light" style="font-size:.67rem">Loin des circuits classiques</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── SERVICES ─────────── -->
+<section id="services" class="py-20 lg:py-28" style="background:var(--bg2)">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="s-head rev text-center mb-12">
+      <span class="lbl">Consulting Voyage</span>
+      <h2 class="font-serif font-light mt-3" style="font-size:clamp(2rem,4vw,3.4rem)">
+        Nos <em class="text-gold">services</em>
+      </h2>
+      <p class="text-txt2 font-light leading-relaxed max-w-sm mx-auto mt-4 text-sm">Trois niveaux d'accompagnement. Un seul standard : l'excellence.</p>
+      <p class="text-center text-muted font-light mb-10 rev" style="font-size:.72rem;letter-spacing:.14em;font-style:italic">
+      Chaque voyage est conçu personnellement &mdash; une approche pensée pour les voyageurs exigeants.
+    </p>
+
+    <!-- CARDS: stack on mobile, grid on desktop -->
+    <div class="rev d1 flex flex-col gap-2 lg:grid lg:gap-px" style="--tw-gap:2px" id="svcGrid">
+      <!-- ROADMAP -->
+      <div class="svc-card">
+        <span class="svc-num">01</span>
+        <span class="lbl block mb-1.5">Roadmap Voyage</span>
+        <h3 class="font-serif font-light mb-2" style="font-size:1.4rem">Le Plan Parfait</h3>
+        <div class="svc-for">Pour les voyageurs autonomes qui veulent un itinéraire clair</div>
+        <span class="svc-price">À partir de 49€</span>
+        <div class="sdiv"></div>
+        <span class="stit">✓ Inclus</span>
+        <ul class="slist">
+          <li>Itinéraire optimisé jour par jour</li>
+          <li>Quartiers & activités incontournables</li>
+          <li>Budget estimatif complet</li>
+          <li>Conseils transports & mobilité</li>
+          <li>Erreurs à absolument éviter</li>
+          <li>Carnet PDF personnalisé</li>
+        </ul>
+        <div class="sdiv"></div>
+        <span class="stit">× Non inclus</span>
+        <ul class="slist no">
+          <li>Appel découverte</li>
+          <li>Recherche de vols</li>
+          <li>Assistance pendant le voyage</li>
+        </ul>
+        <a href="javascript:void(0)" onclick="goTo('contact')" class="svc-btn">Commencer →</a>
+      </div>
+
+      <!-- SUR MESURE -->
+      <div class="svc-card feat">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 mb-5" style="background:var(--gold);color:var(--bg);font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;border-radius:1px">★ Le plus demandé</span>
+        <span class="svc-num">02</span>
+        <span class="lbl block mb-1.5">Voyage Sur Mesure Premium</span>
+        <h3 class="font-serif font-light mb-2" style="font-size:1.4rem">L'Expérience Complète</h3>
+        <div class="svc-for">Pour ceux qui veulent un voyage 100% pensé selon leur profil</div>
+        <span class="svc-price">À partir de 149€</span>
+        <div class="sdiv"></div>
+        <span class="stit">✓ Inclus</span>
+        <ul class="slist">
+          <li>Appel découverte personnalisé</li>
+          <li>Itinéraire 100% sur mesure</li>
+          <li>Sélection hôtels & hébergements</li>
+          <li>Optimisation complète des transports</li>
+          <li>Activités adaptées à votre profil</li>
+          <li>Spots uniques & expériences locales</li>
+          <li>Budget détaillé par poste</li>
+          <li>Carnet voyage premium ultra détaillé</li>
+        </ul>
+        <div class="sdiv"></div>
+        <span class="stit">× Non inclus</span>
+        <ul class="slist no">
+          <li>Réservations effectuées à votre place</li>
+          <li>Recherche de vols (option disponible)</li>
+        </ul>
+        <!-- UPSELL -->
+        <div class="upsell">
+          <div class="flex items-center gap-2.5 mb-2">
+            <span style="font-size:1rem">✈️</span>
+            <span class="text-txt font-semibold flex-1" style="font-size:.7rem;letter-spacing:.06em">Option — Optimisation Vols</span>
+            <span class="font-serif text-gold font-light" style="font-size:1.1rem">+29€</span>
+          </div>
+          <p class="text-txt2 font-light leading-relaxed mb-1.5" style="font-size:.7rem">
+            Analyse des meilleures options vols selon budget, confort, escales et bagages.
+          </p>
+          <span class="text-muted italic" style="font-size:.62rem">Conseil & recommandation uniquement — aucune réservation effectuée.</span>
+        </div>
+        <a href="javascript:void(0)" onclick="goTo('contact')" class="svc-btn">Planifier mon voyage →</a>
+      </div>
+
+      <!-- VIP -->
+      <div class="svc-card">
+        <span class="svc-num">03</span>
+        <span class="lbl block mb-1.5">Concierge VIP</span>
+        <h3 class="font-serif font-light mb-2" style="font-size:1.4rem">L'Ultra Premium</h3>
+        <div class="svc-for">Pour les voyageurs exigeants qui ne font aucun compromis</div>
+        <span class="svc-price">Sur devis</span>
+        <div class="sdiv"></div>
+        <span class="stit">✓ Inclus</span>
+        <ul class="slist">
+          <li>Accompagnement prioritaire & exclusif</li>
+          <li>Stratégie voyage ultra personnalisée</li>
+          <li>Sélection hôtels & expériences luxury</li>
+          <li>Assistance vols avancée incluse</li>
+          <li>Suivi privé tout au long du voyage</li>
+          <li>Carnet voyage VIP exclusif</li>
+        </ul>
+        <div class="sdiv"></div>
+        <span class="stit">Idéal pour</span>
+        <ul class="slist">
+          <li>Lune de miel & voyages de luxe</li>
+          <li>Créateurs de contenu voyage</li>
+          <li>Expériences hors du commun</li>
+        </ul>
+        <a href="javascript:void(0)" onclick="goTo('contact')" class="svc-btn">Demander un devis →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── TESTIMONIALS ─────────── -->
+<section id="testimonials" class="py-20 lg:py-28" style="background:var(--bg)">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="s-head rev text-center mb-12">
+      <span class="lbl">Ce qu'ils disent</span>
+      <h2 class="font-serif font-light mt-3" style="font-size:clamp(2rem,4vw,3.4rem)">
+        Ils ont voyagé <em class="text-gold">différemment.</em>
+      </h2>
+      <div class="rule mt-4"><span></span></div>
+    </div>
+    <!-- 1 col mobile / 2 col desktop -->
+    <div class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:gap-4">
+
+      <div class="testi rev">
+        <span class="absolute top-5 right-5 text-gold font-semibold" style="font-size:.54rem;letter-spacing:.17em;text-transform:uppercase;opacity:.8">Islande · 9 jours</span>
+        <span class="block mb-5" style="color:var(--gold);font-size:.58rem;letter-spacing:4px">★★★★★</span>
+        <p class="font-serif italic font-light leading-relaxed mb-5" style="font-size:1.08rem;color:rgba(237,232,223,.87)">
+          « J'avais essayé de planifier seul, j'ai vite déchanté. En deux échanges DOUSAÏ avait cerné exactement ce que je voulais. Le carnet reçu était précis, carré. On a eu le voyage qu'on cherchait vraiment. »
+        </p>
+        <div style="width:22px;height:1px;background:rgba(201,160,66,.3);margin-bottom:14px"></div>
+        <div class="text-txt font-semibold" style="font-size:.71rem;letter-spacing:.08em">Yanis B.</div>
+        <div class="text-muted font-light mt-1" style="font-size:.62rem">Lyon · Roadmap Voyage</div>
+      </div>
+
+      <div class="testi rev d1">
+        <span class="absolute top-5 right-5 text-gold font-semibold" style="font-size:.54rem;letter-spacing:.17em;text-transform:uppercase;opacity:.8">Japon · 12 jours</span>
+        <span class="block mb-5" style="color:var(--gold);font-size:.58rem;letter-spacing:4px">★★★★★</span>
+        <p class="font-serif italic font-light leading-relaxed mb-5" style="font-size:1.08rem;color:rgba(237,232,223,.87)">
+          « On a découvert des endroits qu'on n'aurait jamais trouvés seules. L'itinéraire était tellement bien pensé qu'on n'a perdu aucune heure. Vraiment au-dessus de mes attentes pour ce prix-là. »
+        </p>
+        <div style="width:22px;height:1px;background:rgba(201,160,66,.3);margin-bottom:14px"></div>
+        <div class="text-txt font-semibold" style="font-size:.71rem;letter-spacing:.08em">Inès &amp; Camille</div>
+        <div class="text-muted font-light mt-1" style="font-size:.62rem">Paris · Voyage Sur Mesure Premium</div>
+      </div>
+
+      <div class="testi rev d2">
+        <span class="absolute top-5 right-5 text-gold font-semibold" style="font-size:.54rem;letter-spacing:.17em;text-transform:uppercase;opacity:.8">Bolivie · 14 jours</span>
+        <span class="block mb-5" style="color:var(--gold);font-size:.58rem;letter-spacing:4px">★★★★★</span>
+        <p class="font-serif italic font-light leading-relaxed mb-5" style="font-size:1.08rem;color:rgba(237,232,223,.87)">
+          « Ce qui m'a convaincu c'est que les conseils étaient concrets, pas du copier-coller de blog. Il connaît vraiment ces pays. On a évité des galères que des voyageurs qu'on a croisés sur place ont vécues. »
+        </p>
+        <div style="width:22px;height:1px;background:rgba(201,160,66,.3);margin-bottom:14px"></div>
+        <div class="text-txt font-semibold" style="font-size:.71rem;letter-spacing:.08em">Marcus T.</div>
+        <div class="text-muted font-light mt-1" style="font-size:.62rem">Bruxelles · Voyage Sur Mesure Premium</div>
+      </div>
+
+      <div class="testi rev d3">
+        <span class="absolute top-5 right-5 text-gold font-semibold" style="font-size:.54rem;letter-spacing:.17em;text-transform:uppercase;opacity:.8">Corée du Sud · 10 jours</span>
+        <span class="block mb-5" style="color:var(--gold);font-size:.58rem;letter-spacing:4px">★★★★★</span>
+        <p class="font-serif italic font-light leading-relaxed mb-5" style="font-size:1.08rem;color:rgba(237,232,223,.87)">
+          « Je suis coréenne, je connaissais déjà un peu le pays, mais il m'a quand même surprise avec des adresses et des spots que même ma famille ne connaissait pas. C'est dire le niveau de recherche. »
+        </p>
+        <div style="width:22px;height:1px;background:rgba(201,160,66,.3);margin-bottom:14px"></div>
+        <div class="text-txt font-semibold" style="font-size:.71rem;letter-spacing:.08em">Ji-Yeon K.</div>
+        <div class="text-muted font-light mt-1" style="font-size:.62rem">Strasbourg · Roadmap Voyage</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── WHY ─────────── -->
+<section id="why" class="py-20 lg:py-28" style="background:var(--bg2)">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="flex flex-col gap-12 lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start">
+      <div class="rev">
+        <span class="lbl">Pourquoi DOUSA TRAVEL</span>
+        <h2 class="font-serif font-light mt-3 mb-5" style="font-size:clamp(1.9rem,3.5vw,3rem)">
+          L'expertise terrain<br>au service de<br><em class="text-gold">votre voyage idéal.</em>
+        </h2>
+        <p class="text-txt2 font-light leading-relaxed mb-4 text-sm lg:text-base">
+          Les agences classiques vendent des forfaits standardisés. DOUSA TRAVEL vous offre l'expertise d'un explorateur de plus de 100 pays, traduite en un voyage pensé uniquement pour vous.
+        </p>
+        <p class="text-txt2 font-light leading-relaxed mb-6 text-sm lg:text-base">
+          La différence ? Chaque conseil vient d'une expérience vécue sur le terrain. Chaque itinéraire est construit autour de votre profil, pas copié d'un modèle.
+        </p>
+        <div class="pull">
+          <p class="font-serif italic leading-relaxed text-txt" style="font-size:1.12rem">
+            « Des dizaines d'heures de planification transformées en un accompagnement sur mesure. »
+          </p>
+        </div>
+      </div>
+      <div class="rev d2">
+        <div class="flex flex-col gap-px" style="background:var(--br);border:1px solid var(--br);border-radius:2px;overflow:hidden">
+          <div class="wi"><div class="wi-ic">🌍</div><div><strong class="block text-sm font-semibold mb-1">Expérience terrain réelle</strong><p class="text-muted font-light text-xs leading-relaxed">Plus de 100 pays parcourus. Chaque conseil repose sur du vécu, pas du marketing.</p></div></div>
+          <div class="wi"><div class="wi-ic">⚡</div><div><strong class="block text-sm font-semibold mb-1">Gain de temps massif</strong><p class="text-muted font-light text-xs leading-relaxed">Des dizaines d'heures de recherches remplacées par un seul accompagnement ciblé.</p></div></div>
+          <div class="wi"><div class="wi-ic">🎯</div><div><strong class="block text-sm font-semibold mb-1">Spots exclusifs & cachés</strong><p class="text-muted font-light text-xs leading-relaxed">Les endroits que Google ne montre pas, que seul un vrai explorateur connaît.</p></div></div>
+          <div class="wi"><div class="wi-ic">🛡</div><div><strong class="block text-sm font-semibold mb-1">Zéro mauvaise surprise</strong><p class="text-muted font-light text-xs leading-relaxed">Les pièges et erreurs coûteuses — je les ai vécus pour que vous ne les viviez pas.</p></div></div>
+          <div class="wi"><div class="wi-ic">💎</div><div><strong class="block text-sm font-semibold mb-1">Approche 100% sur mesure</strong><p class="text-muted font-light text-xs leading-relaxed">Pas de modèle préfabriqué. Chaque voyage est une stratégie adaptée à votre profil.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── DESTINATIONS ─────────── -->
+<section id="destinations" class="py-20 lg:py-28 overflow-hidden" style="background:var(--bg)">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="s-head rev text-center mb-10">
+      <span class="lbl">Destinations organisées</span>
+      <h2 class="font-serif font-light mt-3" style="font-size:clamp(2rem,4vw,3.4rem)">
+        Des destinations vécues,<br><em class="text-gold">certaines que vous ne trouverez<br>dans aucun catalogue.</em>
+      </h2>
+    </div>
+  </div>
+
+  <!-- SCROLL CONTAINER -->
+  <div class="relative px-6 lg:px-12" style="overflow:hidden">
+    <!-- Fade edges - desktop only -->
+    <div class="dest-fade-l hidden lg:block"></div>
+    <div class="dest-fade-r hidden lg:block"></div>
+
+    <div class="dest-scroll rev" id="destScroll">
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-kazakhstan.jpg" alt="Kazakhstan" class="kaz-img" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Steppe &amp; Traditions</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Kazakhstan</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Asie Centrale</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Asie Centrale</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Kazakhstan</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">Steppes infinies, montagnes de l'Ala-Taou, fauconnerie traditionnelle, Route de la Soie. Le Kazakhstan est l'un des territoires les plus grandioses et les moins explorés au monde.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">8 – 12 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-japon.jpg" alt="Japon" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Culture & Immersion</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Japon</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Asie de l'Est</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Asie de l'Est</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Japon</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">Tokyo, Kyoto, Osaka. Entre temples millénaires et modernité radicale, le Japon est un choc culturel absolu. Un pays qui récompense ceux qui savent où chercher.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">10 – 14 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-senegal.jpg" alt="Sénégal" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Faune &amp; Authenticité</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Sénégal</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Afrique de l'Ouest</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Afrique de l'Ouest</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Sénégal</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">Balade avec des lions dans la savane. Dakar et son énergie unique. L'île de Gorée, chargée d'histoire. La Casamance sauvage et préservée. L'Afrique authentique, loin des circuits classiques.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">8 – 12 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-colombie.jpg" alt="Colombie" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Nature & Culture</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Colombie</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Amérique du Sud</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Amérique du Sud</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Colombie</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">La Valle de Cocora et ses palmiers de cire géants. Carthagène des Indes, Medellín la renaissance, l'Amazonie. La Colombie est l'une des métamorphoses les plus spectaculaires de ces dernières décennies.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">10 – 14 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-islande.jpg" alt="Islande" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Paysages Extrêmes</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Islande</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Europe du Nord</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Europe du Nord</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Islande</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">Aurores boréales, volcans actifs, plages de sable noir, épaves d'avion. L'Islande est l'un des seuls endroits où la nature vous dépasse complètement. Chaque saison offre une expérience radicalement différente.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">8 – 10 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-bresil.jpg" alt="Brésil" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Icônes & Contraste</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Brésil</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Amérique du Sud</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Amérique du Sud</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Brésil</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">Rio de Janeiro et le Christ Rédempteur au coucher du soleil. L'Amazonie profonde. Salvador de Bahia. Les chutes d'Iguaçu. Le Brésil est un continent à lui seul — impossible à improviser.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">12 – 18 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-bolivie.jpg" alt="Bolivie" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Aventure & Altitude</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Bolivie</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Amérique du Sud</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Amérique du Sud</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Bolivie</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">Le Salar de Uyuni à 3 600m d'altitude, les lagunes colorées, les routes de sel infinies. La Bolivie est l'un des voyages les plus marquants qui soit — à condition d'être parfaitement guidé.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">10 – 14 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-oman.jpg" alt="Oman" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Architecture &amp; Désert</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Oman</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Moyen-Orient</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Moyen-Orient</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Oman</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">Mascate dorée au coucher du soleil, fjords de Musandam, désert du Wahiba, forts historiques. L'Oman est le Moyen-Orient authentique — hospitalier, sûr et époustouflant.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">8 – 10 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-jordanie.jpg" alt="Jordanie" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Histoire & Désert</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Jordanie</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Moyen-Orient</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Moyen-Orient</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Jordanie</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">Pétra, cité rose taillée dans la roche. Wadi Rum, le désert des astronautes. La Mer Morte. En moins d'une semaine, la Jordanie traverse 5 000 ans d'histoire humaine.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">6 – 8 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-albanie.jpg" alt="Albanie" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Histoire &amp; Méditerranée</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Albanie</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Europe du Sud</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Europe du Sud</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Albanie</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">Berat, la cité aux mille fenêtres, classée UNESCO. La Riviera albanaise. Les Alpes albanaises. L'Europe la plus secrète et la plus brute — encore préservée du tourisme de masse.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">7 – 10 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-coree.jpg" alt="Corée du Sud" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Modernité & Histoire</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Corée du Sud</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Asie de l'Est</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Asie de l'Est</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Corée du Sud</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">Séoul la nuit et ses rues de néons. Gyeongju, l'ancienne capitale. Les temples bouddhistes dans la montagne. La Corée du Sud est l'un des pays les plus sous-estimés d'Asie.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">8 – 10 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-costarica.jpg" alt="Costa Rica" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Nature & Volcans</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Costa Rica</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Amérique Centrale</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Amérique Centrale</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Costa Rica</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">Le volcan Arenal en activité. 25% du territoire en réserve naturelle. Forêts tropicales, tortues marines, sources chaudes. Le Costa Rica est la définition de la biodiversité absolue.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">8 – 12 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-namibie.jpg" alt="Namibie" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Paysages Uniques</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Namibie</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Afrique Australe</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Afrique Australe</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Namibie</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">Deadvlei, Sossusvlei, Etosha. Des arbres morts dans un désert blanc cerné de dunes oranges. La Namibie est le pays des paysages impossibles — un des voyages les plus cinématiques qui soit.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">10 – 14 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dest-flip" style="width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px)" onclick="flipCard(this)">
+        <div class="dest-flip-inner" style="width:100%;height:100%">
+          <div class="dest-front" style="position:absolute;inset:0;border-radius:2px;overflow:hidden">
+            
+            <img src="assets/images/dest-thailande.jpg" alt="Thaïlande" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:brightness(.78)">
+            <div class="dest-ov">
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:4px;display:block">Culture & Gastronomie</span>
+              <span class="font-serif font-light text-txt" style="font-size:1.4rem;display:block">Thaïlande</span>
+              <span style="font-size:.54rem;color:rgba(201,160,66,.7);letter-spacing:.16em;text-transform:uppercase;margin-top:3px;font-weight:600;display:block">Asie du Sud-Est</span>
+              <span style="font-size:.54rem;color:rgba(237,232,223,.38);margin-top:5px;display:block;letter-spacing:.05em">Appuyez pour en savoir plus</span>
+            </div>
+          </div>
+          <div class="dest-back">
+            <div>
+              <span style="font-size:.5rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px">Asie du Sud-Est</span>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:300;color:#EDE8DF;margin-bottom:13px;line-height:1.1">Thaïlande</h3>
+              <p style="font-size:.77rem;color:rgba(237,232,223,.7);line-height:1.75;font-weight:300">Bien plus que des plages. Des temples sacrés au cœur de Bangkok, des marchés flottants, une gastronomie qui redéfinit votre rapport à la nourriture. La Thaïlande profonde ne s'improvise pas.</p>
+            </div>
+            <div>
+              <div style="height:1px;background:rgba(201,160,66,.18);margin:16px 0"></div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:13px">
+                <span style="font-size:.58rem;color:var(--muted);letter-spacing:.08em">Durée recommandée</span>
+                <span style="font-size:.7rem;color:var(--gold);font-weight:600">10 – 14 jours</span>
+              </div>
+              <button onclick="event.stopPropagation();goTo('contact')" style="width:100%;background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:11px;border:none;border-radius:2px;cursor:pointer" onmouseover="this.style.background='#DDB85A'" onmouseout="this.style.background='#C9A042'">Planifier ce voyage →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div onclick="goTo('contact')" style="
+          width:clamp(260px,75vw,300px);height:clamp(330px,55vw,420px);
+          flex-shrink:0;scroll-snap-align:start;
+          background:linear-gradient(135deg,#0F1D36 0%,#091523 100%);
+          border:1px solid rgba(201,160,66,0.28);border-radius:2px;
+          display:flex;flex-direction:column;align-items:center;justify-content:center;
+          padding:32px;text-align:center;cursor:pointer;transition:border-color .3s"
+          onmouseover="this.style.borderColor='rgba(201,160,66,.6)'"
+          onmouseout="this.style.borderColor='rgba(201,160,66,.28)'">
+        <span style="font-size:2.4rem;color:var(--gold);margin-bottom:20px;display:block;font-family:'Cormorant Garamond',serif;font-weight:300">∞</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:#EDE8DF;line-height:1.3;margin-bottom:14px">Et bien<br><em style="color:var(--gold)">plus encore.</em></p>
+        <p style="font-size:.7rem;color:rgba(237,232,223,.45);letter-spacing:.08em;line-height:1.9;margin-bottom:24px">Votre prochain voyage<br>nous attend.</p>
+        <span style="background:var(--gold);color:#05080D;font-family:'Raleway',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:12px 24px;border-radius:2px;display:inline-block;transition:background .3s">Planifier mon voyage</span>
+      </div>
+    
+    <!-- MOBILE SWIPE HINT -->
+    <p class="text-center text-muted mt-4 lg:hidden" style="font-size:.6rem;letter-spacing:.14em;text-transform:uppercase">
+      ← Glissez pour découvrir →
+    </p>
+  </div>
+</section>
+
+<!-- ─────────── PROCESS ─────────── -->
+<section id="process" class="py-20 lg:py-28" style="background:var(--bg2)">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="s-head rev text-center mb-12">
+      <span class="lbl">Comment ça marche</span>
+      <h2 class="font-serif font-light mt-3" style="font-size:clamp(2rem,4vw,3.4rem)">
+        Simple. Rapide. <em class="text-gold">Efficace.</em>
+      </h2>
+      <div class="rule mt-4"><span></span></div>
+    </div>
+
+    <!-- Steps: vertical on mobile, horizontal on desktop -->
+    <div class="flex flex-col gap-10 lg:grid lg:grid-cols-3 lg:gap-0 lg:relative">
+      <!-- Desktop connector line -->
+      <div class="hidden lg:block absolute" style="top:38px;left:calc(16.67% + 20px);right:calc(16.67% + 20px);height:1px;background:linear-gradient(90deg,var(--gold),rgba(201,160,66,.12),var(--gold));opacity:.2"></div>
+
+      <div class="pst rev text-center lg:px-8">
+        <div class="pst-c"><span class="font-serif text-gold font-light" style="font-size:1.7rem">I</span></div>
+        <h3 class="font-serif font-light mb-3" style="font-size:1.2rem">Dites-moi tout</h3>
+        <p class="text-muted font-light text-xs leading-relaxed max-w-48 mx-auto">Destination, budget, dates, style. Je comprends votre profil en quelques échanges.</p>
+      </div>
+      <div class="pst rev d2 text-center lg:px-8">
+        <div class="pst-c"><span class="font-serif text-gold font-light" style="font-size:1.7rem">II</span></div>
+        <h3 class="font-serif font-light mb-3" style="font-size:1.2rem">Je conçois votre voyage</h3>
+        <p class="text-muted font-light text-xs leading-relaxed max-w-48 mx-auto">Itinéraire sur mesure, hébergements, spots exclusifs — pensé pour vous uniquement.</p>
+      </div>
+      <div class="pst rev d3 text-center lg:px-8">
+        <div class="pst-c"><span class="font-serif text-gold font-light" style="font-size:1.7rem">III</span></div>
+        <h3 class="font-serif font-light mb-3" style="font-size:1.2rem">Voyagez mieux</h3>
+        <p class="text-muted font-light text-xs leading-relaxed max-w-48 mx-auto">Partez avec un carnet voyage premium et des recommandations exclusives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── CTA BAND ─────────── -->
+<section class="py-20 lg:py-24 text-center relative overflow-hidden border-t border-b" style="background:var(--bg);border-color:var(--br)">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-56 pointer-events-none" style="background:radial-gradient(ellipse,rgba(201,160,66,.06) 0%,transparent 70%)"></div>
+  <div class="max-w-3xl mx-auto px-6 relative z-10 rev">
+    <span class="lbl">Pour les voyageurs exigeants</span>
+    <h2 class="font-serif font-light mt-3 mb-5" style="font-size:clamp(1.9rem,4.5vw,3.8rem)">
+      Arrêtez de perdre des heures<br>à planifier. <em class="text-gold">Voyagez mieux.</em>
+    </h2>
+    <p class="text-txt2 font-light leading-relaxed mb-8 max-w-sm mx-auto text-sm">
+      Pendant que vous cherchez sur Google, d'autres ont déjà leur itinéraire parfait en main.
+    </p>
+    <button onclick="goTo('contact')" class="btn-g">Planifier mon voyage →</button>
+  </div>
+</section>
+
+<!-- ─────────── CONTACT ─────────── -->
+<section id="contact" class="py-20 lg:py-28" style="background:var(--bg2)">
+  <div class="max-w-2xl mx-auto px-6 lg:px-12">
+    <div class="text-center mb-10 rev">
+      <span class="lbl">Commencer</span>
+      <h2 class="font-serif font-light mt-3 mb-4" style="font-size:clamp(1.9rem,3.5vw,3rem)">
+        Parlez-moi de votre<br><em class="text-gold">prochain voyage.</em>
+      </h2>
+      <p class="text-txt2 font-light leading-relaxed text-sm">
+        Chaque projet est lu et traité personnellement par DOUSAÏ. Réponse sous 48h.
+      </p>
+    </div>
+    <div class="fg rev d1">
+      <form id="cForm" onsubmit="sendForm(event)" novalidate>
+
+          <!-- Honeypot anti-spam invisible -->
+          <div style="position:absolute;left:-9999px;opacity:0;pointer-events:none">
+            <input type="text" name="honeypot" tabindex="-1" autocomplete="off">
+          </div>
+
+          <!-- Prénom + Email -->
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 mb-4">
+            <div>
+              <label class="block mb-1.5" style="font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600">Prénom *</label>
+              <input class="finp" type="text" id="f_prenom" name="prenom" placeholder="Votre prénom" required>
+            </div>
+            <div>
+              <label class="block mb-1.5" style="font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600">Email *</label>
+              <input class="finp" type="email" id="f_email" name="email" placeholder="votre@email.com" required>
+            </div>
+          </div>
+
+          <!-- Téléphone + Destination -->
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 mb-4">
+            <div>
+              <label class="block mb-1.5" style="font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600">Téléphone</label>
+              <input class="finp" type="tel" id="f_phone" name="phone" placeholder="+33 6 00 00 00 00">
+            </div>
+            <div>
+              <label class="block mb-1.5" style="font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600">Destination(s) *</label>
+              <input class="finp" type="text" id="f_dest" name="dest" placeholder="Ex : Japon, Islande…" required>
+            </div>
+          </div>
+
+          <!-- Budget + Service -->
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 mb-4">
+            <div>
+              <label class="block mb-1.5" style="font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600">Budget indicatif</label>
+              <select class="fsel" id="f_budget" name="budget" style="width:100%">
+                <option value="" disabled selected>Sélectionner</option>
+                <option>Moins de 500€</option>
+                <option>500€ – 1 000€</option>
+                <option>1 000€ – 2 500€</option>
+                <option>2 500€ – 5 000€</option>
+                <option>Plus de 5 000€</option>
+              </select>
+            </div>
+            <div>
+              <label class="block mb-1.5" style="font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600">Service souhaité</label>
+              <select class="fsel" id="f_service" name="service" style="width:100%">
+                <option value="" disabled selected>Sélectionner</option>
+                <option>Roadmap Voyage — 49€</option>
+                <option>Sur Mesure Premium — 149€</option>
+                <option>Sur Mesure + Vols — 178€</option>
+                <option>Concierge VIP — Sur devis</option>
+                <option>Je ne sais pas encore</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Style de voyage -->
+          <div class="mb-4">
+            <label class="block mb-1.5" style="font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600">Style de voyage</label>
+            <select class="fsel" id="f_style" name="style" style="width:100%">
+              <option value="" disabled selected>Sélectionner</option>
+              <option>Aventure &amp; Exploration</option>
+              <option>Culture &amp; Découverte</option>
+              <option>Luxe &amp; Confort</option>
+              <option>Nature &amp; Randonnée</option>
+              <option>Créateur de contenu</option>
+              <option>Mix de tout</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div class="mb-5">
+            <label class="block mb-1.5" style="font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600">Vos dates &amp; attentes *</label>
+            <textarea class="ftxt" id="f_msg" name="message" rows="4" placeholder="Ex : 10 jours au Japon en septembre, mix culture et nature, 2 personnes, budget total 3 500€…" required></textarea>
+          </div>
+
+          <button type="submit" id="submitBtn" class="fsub">Envoyer ma demande →</button>
+        </form>
+
+        <!-- SUCCÈS -->
+        <div id="successMsg" style="display:none;text-align:center;padding:40px 20px">
+          <div style="font-size:2rem;margin-bottom:16px;color:var(--gold)">✦</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:300;color:#EDE8DF;margin-bottom:14px">
+            Votre demande a bien été envoyée.
+          </h3>
+          <p style="font-size:.84rem;color:#586070;line-height:1.8;max-width:340px;margin:0 auto 20px">
+            Je reviendrai vers vous sous 48h pour construire ensemble votre prochain voyage.
+          </p>
+          <p style="font-size:.72rem;color:var(--gold);letter-spacing:.1em;font-style:italic">— DOUSAÏ</p>
+        </div>
+
+        <!-- ERREUR -->
+        <div id="errorMsg" style="display:none;text-align:center;padding:14px;margin-top:14px;border:1px solid rgba(255,100,100,.25);border-radius:2px;background:rgba(255,100,100,.05)">
+          <p style="font-size:.76rem;color:#ff9090">Une erreur est survenue. Écrivez-moi directement : <a href="mailto:dousa.travel@gmail.com" style="color:var(--gold)">dousa.travel@gmail.com</a></p>
+        </div>
+      <p id="formNote" class="text-center mt-4 text-muted" style="font-size:.64rem;letter-spacing:.06em">
+        Réponse sous 48h &middot; Traitement personnel &middot;
+        <a href="mailto:dousa.travel@gmail.com" style="color:var(--gold)">dousa.travel@gmail.com</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── FOOTER ─────────── -->
+<footer class="py-16 border-t" style="background:var(--bg);border-color:var(--br)">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <!-- GRID: stack on mobile, 3-col on desktop -->
+    <div class="grid grid-cols-1 gap-8 mb-12 lg:grid-cols-3 lg:gap-14">
+      <div>
+        <div class="font-serif tracking-widest font-light" style="font-size:1.25rem">DOUSA <span class="text-gold">TRAVEL</span></div>
+        <p class="text-muted font-light leading-relaxed mt-3 text-sm max-w-xs">
+          Consulting voyage premium. Plus de 100 pays explorés au service de votre prochain voyage.
+        </p>
+        <div class="flex items-center gap-5 mt-5">
+          <a href="https://www.instagram.com/dousa.travel" target="_blank" rel="noopener"
+             style="display:inline-flex;align-items:center;gap:7px;color:#586070;font-size:.61rem;letter-spacing:.13em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:color .25s"
+             onmouseover="this.style.color='#C9A042'" onmouseout="this.style.color='#586070'">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            @dousa.travel
+          </a>
+          <span style="color:rgba(201,160,66,.2)">·</span>
+          <a href="https://www.tiktok.com/@dousa.travel" target="_blank" rel="noopener"
+             style="display:inline-flex;align-items:center;gap:7px;color:#586070;font-size:.61rem;letter-spacing:.13em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:color .25s"
+             onmouseover="this.style.color='#C9A042'" onmouseout="this.style.color='#586070'">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.77 1.52V6.75a4.85 4.85 0 01-1-.06z"/></svg>
+            @dousa.travel
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-gold font-semibold mb-4" style="font-size:.56rem;letter-spacing:.24em;text-transform:uppercase">Services</h4>
+        <button onclick="goTo('services')" class="fl-link bg-transparent border-0 cursor-pointer text-left w-full p-0" style="font-family:inherit">Roadmap Voyage — 49€</button>
+        <button onclick="goTo('services')" class="fl-link bg-transparent border-0 cursor-pointer text-left w-full p-0" style="font-family:inherit">Sur Mesure Premium — 149€</button>
+        <a href="mailto:dousa.travel@gmail.com" class="fl-link">Concierge VIP — Sur devis</a>
+      </div>
+      <div>
+        <h4 class="text-gold font-semibold mb-4" style="font-size:.56rem;letter-spacing:.24em;text-transform:uppercase">Contact</h4>
+        <a href="javascript:void(0)" onclick="goTo('contact')" class="fl-link">Planifier mon voyage</a>
+        <a href="mailto:dousa.travel@gmail.com" class="fl-link">dousa.travel@gmail.com</a>
+        <a href="javascript:void(0)" onclick="goTo('contact')" class="fl-link">Formulaire de contact</a>
+      </div>
+    </div>
+    <div class="border-t pt-6 flex flex-col items-center gap-2 lg:flex-row lg:justify-between" style="border-color:rgba(237,232,223,.07)">
+      <span class="text-muted" style="font-size:.61rem;letter-spacing:.07em">© 2025 DOUSA TRAVEL. Tous droits réservés.</span>
+      <span class="text-muted" style="font-size:.61rem;letter-spacing:.07em">Conçu pour les vrais explorateurs.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── FLIP CARD
+function flipCard(el){
+  el.classList.toggle('flipped');
+}
+
+// ── INTERNAL NAVIGATION — no URL changes
+function goTo(id){
+  const el = document.getElementById(id);
+  if(!el) return;
+  const navH = document.getElementById('nav')?.offsetHeight || 70;
+  const top = el.getBoundingClientRect().top + window.pageYOffset - navH - 16;
+  window.scrollTo({top: Math.max(0, top), behavior: 'smooth'});
+}
+// ── NAV SCROLL
+const nav = document.getElementById("nav");
+const barH = 0;
+function updateNav(){
+  if(scrollY > barH + 10){
+    nav.style.top = "0";
+    nav.classList.add("scrolled");
+    nav.style.background = "rgba(5,8,13,.95)";
+    nav.style.backdropFilter = "blur(24px)";
+    nav.style.borderBottom = "1px solid rgba(201,160,66,.16)";
+    nav.style.padding = window.innerWidth >= 1024 ? "12px 48px" : "10px 22px";
+  } else {
+    nav.style.top = "0px";
+    nav.style.background = "transparent";
+    nav.style.backdropFilter = "none";
+    nav.style.borderBottom = "none";
+    nav.style.padding = window.innerWidth >= 1024 ? "20px 48px" : "18px 22px";
+  }
+}
+window.addEventListener("scroll", updateNav);
+updateNav();
+
+// ── MOBILE MENU
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("open");
+  document.body.style.overflow = document.getElementById("mobileMenu").classList.contains("open") ? "hidden" : "";
+}
+
+// ── SERVICES GRID — 3 cols on desktop
+function setServicesGrid(){
+  const g = document.getElementById("svcGrid");
+  if(!g) return;
+  if(window.innerWidth >= 1024){
+    g.style.display = "grid";
+    g.style.gridTemplateColumns = "1fr 1.12fr 1fr";
+    g.style.gap = "2px";
+    g.style.background = "rgba(201,160,66,.16)";
+    g.style.border = "1px solid rgba(201,160,66,.16)";
+    g.style.borderRadius = "2px";
+    g.style.overflow = "hidden";
+  } else {
+    g.style.display = "flex";
+    g.style.flexDirection = "column";
+    g.style.gap = "8px";
+    g.style.background = "none";
+    g.style.border = "none";
+    g.style.overflow = "visible";
+    // Individual cards get border on mobile
+    document.querySelectorAll(".svc-card").forEach(c=>{
+      c.style.border = "1px solid rgba(201,160,66,.16)";
+      c.style.borderRadius = "2px";
+    });
+  }
+}
+setServicesGrid();
+window.addEventListener("resize", setServicesGrid);
+
+// ── REVEAL SCROLL
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add("on"); obs.unobserve(e.target); }
+  });
+}, {threshold: .09, rootMargin: "0px 0px -18px 0px"});
+document.querySelectorAll(".rev").forEach(el => obs.observe(el));
+
+// ── FORM SUBMIT
+function sendForm(e) {
+  e.preventDefault();
+  // Anti-spam honeypot
+  const honey = e.target.querySelector('[name="honeypot"]');
+  if (honey && honey.value.length > 0) return;
+  // Validation
+  const prenom = document.getElementById('f_prenom')?.value.trim();
+  const email  = document.getElementById('f_email')?.value.trim();
+  const dest   = document.getElementById('f_dest')?.value.trim();
+  const msg    = document.getElementById('f_msg')?.value.trim();
+  if (!prenom || !email || !dest || !msg) {
+    alert('Merci de remplir tous les champs obligatoires (*).');
+    return;
+  }
+  // Loading state
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = 'Envoi en cours…';
+  btn.disabled = true;
+  btn.style.opacity = '0.65';
+  // Template parameters
+  const params = {
+    prenom:      prenom,
+    email:       email,
+    phone:       document.getElementById('f_phone')?.value.trim() || 'Non renseigné',
+    destination: dest,
+    budget:      document.getElementById('f_budget')?.value || 'Non renseigné',
+    service:     document.getElementById('f_service')?.value || 'Non renseigné',
+    style:       document.getElementById('f_style')?.value || 'Non renseigné',
+    message:     msg,
+    reply_to:    email,
+  };
+  // ── EmailJS — remplace les 2 valeurs ci-dessous ──
+  const SERVICE_ID  = 'service_wvw4kyl';   // ex: service_xxxxxxx
+  const TEMPLATE_ID = 'template_iomk9nf';  // ex: template_xxxxxxx
+  emailjs.send(SERVICE_ID, TEMPLATE_ID, params)
+    .then(() => {
+      document.getElementById('cForm').style.display    = 'none';
+      document.getElementById('formNote').style.display = 'none';
+      document.getElementById('errorMsg').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    })
+    .catch(err => {
+      console.error('EmailJS error:', err);
+      btn.textContent  = 'Envoyer ma demande →';
+      btn.disabled     = false;
+      btn.style.opacity = '1';
+      document.getElementById('errorMsg').style.display = 'block';
+    });
+}
+</script>
+
+<!-- D3 WORLD MAP -->
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson@3/dist/topojson.min.js"></script>
+<script>
+(function() {
+  const visited = new Set([304,512, 8, 12, 528, 20, 31, 32, 40, 558, 51, 566, 56, 578, 68, 70, 72, 76, 591, 84, 600, 604, 96, 100, 104, 616, 620, 624, 112, 116, 634, 124, 642, 643, 132, 152, 156, 674, 682, 170, 686, 688, 188, 702, 191, 704, 703, 705, 196, 710, 203, 204, 716, 208, 724, 222, 233, 748, 752, 756, 246, 762, 250, 764, 768, 268, 270, 784, 275, 788, 276, 792, 288, 807, 300, 818, 826, 320, 840, 336, 340, 858, 860, 348, 352, 360, 372, 376, 380, 383, 384, 392, 398, 400, 410, 414, 417, 418, 426, 428, 438, 440, 442, 458, 470, 478, 484, 492, 498, 499, 504, 508]);
+  
+  function initMap() {
+    const container = document.getElementById('worldmap');
+    if (!container) return;
+    
+    const W = container.clientWidth || 600;
+    const H = Math.round(W * 0.52);
+    
+    const svg = d3.select('#worldmap')
+      .append('svg')
+      .attr('viewBox', `0 0 ${W} ${H}`)
+      .attr('width', '100%')
+      .style('display', 'block')
+      .style('background', '#05080D');
+    
+    // Ocean background
+    svg.append('rect')
+      .attr('width', W).attr('height', H)
+      .attr('fill', '#05080D');
+    
+    const projection = d3.geoNaturalEarth1()
+      .scale(W / 5.8)
+      .translate([W / 2, H / 2 + H * 0.05]);
+    
+    const path = d3.geoPath().projection(projection);
+    const tooltip = document.getElementById('map-tooltip');
+    
+    fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+      .then(r => r.json())
+      .then(world => {
+        const countries = topojson.feature(world, world.objects.countries);
+        const borders = topojson.mesh(world, world.objects.countries, (a, b) => a !== b);
+        
+        // Country name lookup (ISO numeric)
+        const countryNames = {
+          12:'Algérie',204:'Bénin',72:'Botswana',132:'Cap-Vert',384:"Côte d'Ivoire",
+          818:'Égypte',748:'Eswatini',270:'Gambie',288:'Ghana',624:'Guinée-Bissau',
+          426:'Lesotho',478:'Mauritanie',504:'Maroc',508:'Mozambique',566:'Nigéria',
+          686:'Sénégal',710:'Afrique du Sud',768:'Togo',788:'Tunisie',716:'Zimbabwe',
+          51:'Arménie',31:'Azerbaïdjan',96:'Brunei',116:'Cambodge',156:'Chine',
+          268:'Géorgie',360:'Indonésie',376:'Israël',392:'Japon',400:'Jordanie',
+          398:'Kazakhstan',414:'Koweït',417:'Kirghizistan',418:'Laos',458:'Malaisie',
+          104:'Myanmar',512:'Oman',275:'Palestine',634:'Qatar',643:'Russie',
+          682:'Arabie Saoudite',702:'Singapour',410:'Corée du Sud',762:'Tadjikistan',
+          764:'Thaïlande',792:'Turquie',784:'Émirats Arabes Unis',860:'Ouzbékistan',704:'Vietnam',
+          8:'Albanie',20:'Andorre',40:'Autriche',112:'Biélorussie',56:'Belgique',
+          70:'Bosnie-Herzégovine',100:'Bulgarie',191:'Croatie',196:'Chypre',203:'Tchéquie',
+          208:'Danemark',233:'Estonie',246:'Finlande',250:'France',276:'Allemagne',
+          300:'Grèce',348:'Hongrie',352:'Islande',372:'Irlande',380:'Italie',
+          428:'Lettonie',438:'Liechtenstein',440:'Lituanie',442:'Luxembourg',
+          470:'Malte',498:'Moldavie',492:'Monaco',499:'Monténégro',528:'Pays-Bas',
+          807:'Macédoine du Nord',578:'Norvège',616:'Pologne',620:'Portugal',
+          642:'Roumanie',674:'Saint-Marin',688:'Serbie',703:'Slovaquie',705:'Slovénie',
+          724:'Espagne',752:'Suède',756:'Suisse',826:'Royaume-Uni',336:'Vatican',
+          383:'Kosovo',
+          84:'Belize',124:'Canada',188:'Costa Rica',222:'El Salvador',320:'Guatemala',
+          340:'Honduras',484:'Mexique',558:'Nicaragua',591:'Panama',840:'États-Unis',
+          32:'Argentine',68:'Bolivie',76:'Brésil',152:'Chili',170:'Colombie',
+          600:'Paraguay',604:'Pérou',858:'Uruguay',
+        };
+        
+        // Draw countries
+        svg.selectAll('.country')
+          .data(countries.features)
+          .enter().append('path')
+          .attr('class', 'country')
+          .attr('d', path)
+          .attr('fill', d => {
+            const id = +d.id;
+            return visited.has(id) ? '#C9A042' : '#141C2E';
+          })
+          .attr('stroke', '#05080D')
+          .attr('stroke-width', 0.4)
+          .style('cursor', d => visited.has(+d.id) ? 'pointer' : 'default')
+          .style('transition', 'fill 0.2s')
+          .on('mouseover', function(event, d) {
+            const id = +d.id;
+            if (visited.has(id)) {
+              d3.select(this).attr('fill', '#E2C06A');
+              const name = countryNames[id] || '';
+              if (name) {
+                tooltip.style.display = 'block';
+                tooltip.textContent = name;
+              }
+            } else {
+              d3.select(this).attr('fill', '#1E2840');
+            }
+          })
+          .on('mousemove', function(event) {
+            const rect = document.getElementById('worldmap-container').getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            tooltip.style.left = (x + 12) + 'px';
+            tooltip.style.top = (y - 28) + 'px';
+          })
+          .on('mouseout', function(event, d) {
+            const id = +d.id;
+            d3.select(this).attr('fill', visited.has(id) ? '#C9A042' : '#141C2E');
+            tooltip.style.display = 'none';
+          });
+        
+        // Country borders
+        svg.append('path')
+          .datum(borders)
+          .attr('fill', 'none')
+          .attr('stroke', 'rgba(5,8,13,0.8)')
+          .attr('stroke-width', 0.3)
+          .attr('d', path);
+      })
+      .catch(err => console.warn('Map load error:', err));
+  }
+  
+  // Init after DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMap);
+  } else {
+    setTimeout(initMap, 100);
+  }
+  
+  // Reinit on resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      const m = document.getElementById('worldmap');
+      if (m) { m.innerHTML = ''; initMap(); }
+    }, 300);
+  });
+})();
+</script>
+
+</body>
+</html>

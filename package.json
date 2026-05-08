@@ -1,0 +1,13 @@
+{
+  "name": "dousa-travel",
+  "version": "1.0.0",
+  "description": "DOUSA TRAVEL — Consulting Voyage Premium",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site — no build required'"
+  },
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
